@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+  <span>
+    <i class="material-icons">menu</i>
+  </span>
+  <span class="header-spacer"></span>
+  <!-- <button mat-button>Menu Option 01</button> -->
+  <!-- <button mat-button>Menu Option 02</button> -->
+  <button mat-button *ngIf="!(isLoggedIn | async)" routerLink="login">Login</button>
+  <button mat-button *ngIf="(isLoggedIn | async)" (click)="onLogout()">Logout</button>
+</mat-toolbar-row>
+</mat-toolbar>
