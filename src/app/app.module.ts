@@ -25,6 +25,8 @@ import {
   FirebaseUIAuthConfig,
   FirebaseUIModule
 } from 'firebaseui-angular';
+import { HeaderLayoutComponent } from './layouts/header-layout/header-layout.component';
+import { HeaderlessLayoutComponent } from './layouts/headerless-layout/headerless-layout.component';
 
 const facebookCustomConfig: AuthProviderWithCustomConfig = {
   provider: AuthProvider.Facebook,
@@ -85,7 +87,9 @@ const firebaseUiAuthConfig: FirebaseUIAuthConfig = {
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderLayoutComponent,
+    HeaderlessLayoutComponent
   ],
   imports: [
     BrowserModule,

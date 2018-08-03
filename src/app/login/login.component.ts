@@ -6,8 +6,8 @@ import { AuthService } from '../auth/auth.service'
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  template: `<firebase-ui (signInSuccessWithAuthResult)="successCallback($event)" (signInFailure)="errorCallback($event)"></firebase-ui>`,
+  styles: []
 })
 export class LoginComponent implements OnInit {
   private returnUrl: string;
