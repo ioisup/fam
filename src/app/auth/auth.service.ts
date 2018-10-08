@@ -39,6 +39,7 @@ export class AuthService implements OnDestroy{
   }
 
   ngOnDestroy(){
+    this.user$.complete()
     this.subscriptions.forEach(x=>x.unsubscribe())
   }
 
